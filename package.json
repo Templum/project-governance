@@ -2,8 +2,10 @@
   "name": "project-governance",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./action/index.js",
   "scripts": {
+    "pack": "ncc build ./src/index.ts --out action --license [name].licenses.txt",
+    "build": "ncc build ./src/index.ts --out action --source-map",
     "lint:tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

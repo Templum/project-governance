@@ -146,3 +146,7 @@ dist
 typings
 
 # End of https://www.toptal.com/developers/gitignore/api/node,typings
+
+# Prevent Source Map from being commited
+action/index.js.map
+action/sourcemap-register.js
