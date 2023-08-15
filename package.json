@@ -1,0 +1,16 @@
+{
+  "name": "project-governance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "email": "templum.dev@gmail.com",
+    "name": "Simon Pelczer",
+    "url": "https://github.com/Templum"
+  },
+  "license": "Apache-2.0"
+}
