@@ -1,7 +1,6 @@
 name: 'Project Governance'
 description: 'this is a description'
 author: 'Templum'
-inputs:
 runs:
   using: 'node16'
   main: './action/index.js'
