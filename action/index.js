@@ -9655,7 +9655,7 @@ function main() {
     var _a, _b, _c;
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const accessToken = (0, core_1.getInput)('github-token');
+            const accessToken = (0, core_1.getInput)('GITHUB_TOKEN');
             const { owner, repo } = github_1.context.repo;
             const issue = (_c = (_b = (_a = github_1.context.payload) === null || _a === void 0 ? void 0 : _a.issue) === null || _b === void 0 ? void 0 : _b.number) !== null && _c !== void 0 ? _c : -1;
             // Url is taken based on GITHUB_API_URL

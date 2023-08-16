@@ -3,7 +3,7 @@ import { context, getOctokit } from '@actions/github';
 
 async function main() {
   try {
-    const accessToken = getInput('github-token');
+    const accessToken = getInput('GITHUB_TOKEN');
     const { owner, repo } = context.repo;
     const issue = context.payload?.issue?.number ?? -1;
 
