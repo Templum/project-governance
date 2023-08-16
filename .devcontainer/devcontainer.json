@@ -30,7 +30,8 @@
 				"pmneo.tsimporter",
 				"jianglinghao.vscode-npm-scripts",
 				"pflannery.vscode-versionlens",
-				"rvest.vs-code-prettier-eslint"
+				"rvest.vs-code-prettier-eslint",
+				"GitHub.vscode-github-actions"
 			],
 			"settings": {
 				"editor.defaultFormatter": "rvest.vs-code-prettier-eslint",

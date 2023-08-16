@@ -1,0 +1,9 @@
+name: Test Flow
+on: [pull_request]
+jobs:
+  testing:
+    permissions: 
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Templum/project-governance@develop
