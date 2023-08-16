@@ -7,6 +7,7 @@
     "pack": "ncc build ./src/index.ts --out action --license [name].licenses.txt",
     "build": "ncc build ./src/index.ts --out action --source-map",
     "lint:tsc": "tsc",
+    "lint:eslint": "eslint --ignore-path .gitignore --ext .ts .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -21,7 +22,11 @@
     "@actions/github": "^5.1.1"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
     "@vercel/ncc": "^0.36.1",
+    "eslint": "^8.47.0",
+    "prettier": "^3.0.2",
     "typescript": "^5.1.6"
   }
 }
