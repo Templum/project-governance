@@ -9655,9 +9655,13 @@ function main() {
     var _a, _b, _c;
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const accessToken = (0, core_1.getInput)('GITHUB_TOKEN');
+            const accessToken = (0, core_1.getInput)('github-token');
             const { owner, repo } = github_1.context.repo;
             const issue = (_c = (_b = (_a = github_1.context.payload) === null || _a === void 0 ? void 0 : _a.issue) === null || _b === void 0 ? void 0 : _b.number) !== null && _c !== void 0 ? _c : -1;
+            if (issue === -1) {
+                console.warn('Was not able to determine the related PR/Issue will perform NoOp');
+                return;
+            }
             // Url is taken based on GITHUB_API_URL
             const client = (0, github_1.getOctokit)(accessToken);
             const { data } = yield client.rest.issues.createComment({

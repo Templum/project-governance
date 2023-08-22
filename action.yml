@@ -1,6 +1,12 @@
 name: 'Project Governance'
 description: 'this is a description'
 author: 'Templum'
+
+inputs:
+  github-token:
+    description: 'A Personal Access Token or the Github Token with Write-Access to Pull Requests. If none provided it will use the default Github Token.'
+    default: ${{ github.token }}
+    required: false
 runs:
   using: 'node16'
   main: './action/index.js'
