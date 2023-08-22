@@ -9652,12 +9652,12 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core_1 = __nccwpck_require__(2186);
 const github_1 = __nccwpck_require__(5438);
 function main() {
-    var _a, _b, _c;
+    var _a, _b, _c, _d;
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const accessToken = (0, core_1.getInput)('github-token');
             const { owner, repo } = github_1.context.repo;
-            const issue = (_c = (_b = (_a = github_1.context.payload) === null || _a === void 0 ? void 0 : _a.issue) === null || _b === void 0 ? void 0 : _b.number) !== null && _c !== void 0 ? _c : -1;
+            const issue = (_d = (_b = (_a = github_1.context.payload.issue) === null || _a === void 0 ? void 0 : _a.number) !== null && _b !== void 0 ? _b : (_c = github_1.context.payload.pull_request) === null || _c === void 0 ? void 0 : _c.number) !== null && _d !== void 0 ? _d : -1;
             if (issue === -1) {
                 console.warn('Was not able to determine the related PR/Issue will perform NoOp');
                 return;
